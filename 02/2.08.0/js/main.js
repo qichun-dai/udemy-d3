@@ -26,3 +26,20 @@ rects.enter().append("rect")
 .attr('stroke', 'black')
 .attr('fill', '#69a3b2');
 })
+
+d3.csv("data/unemployment.csv").then(data =>{
+    data.forEach(d => {
+        d.unemployment=Number(d.unemployment)
+    });
+    console.log(data)
+// const rects = svg.selectAll("rect")
+// .data(data)
+
+// rects.enter().append("rect")
+// .attr('x', (d,i)=>(i*50))
+// .attr('y', 5)
+// .attr('width', 20)
+// .attr('height', (d)=>d.height)
+// .attr('stroke', 'black')
+// .attr('fill', '#69a3b2');
+})
