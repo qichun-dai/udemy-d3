@@ -75,6 +75,8 @@ const xAxisCall = d3.axisBottom(x)
 
   const rects = g.selectAll("rect")
     .data(data)
+
+
   
   rects.enter().append("rect")
     .attr("y", d => y(d.revenue))
