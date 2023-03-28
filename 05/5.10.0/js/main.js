@@ -5,5 +5,6 @@
 */
 
 d3.json("data/data.json").then(function(data){
+	dara = data.filter(Number)
 	console.log(data);
 })
